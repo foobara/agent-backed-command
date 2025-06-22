@@ -1,7 +1,7 @@
 require_relative "version"
 
 source "https://rubygems.org"
-ruby Foobara::AgentBackedCommand::MINIMUM_RUBY_VERSION
+ruby Foobara::AgentBackedCommandVersion::MINIMUM_RUBY_VERSION
 
 gemspec
 
@@ -18,6 +18,10 @@ group :development do
 end
 
 group :development, :test do
+  gem "foobara-anthropic-api"
+  # gem "foobara-ollama-api"
+  gem "foobara-open-ai-api"
+
   gem "pry"
   gem "pry-byebug"
   # TODO: Just adding this to suppress warnings seemingly coming from pry-byebug. Can probably remove this once

@@ -1,5 +1,5 @@
-RSpec.describe Foobara::AgentBackedCommand do
+RSpec.describe Foobara::AgentBackedCommandVersion do
   it "has a version number" do
-    expect(Foobara::AgentBackedCommand::VERSION).to_not be_nil
+    expect(Foobara::AgentBackedCommandVersion::VERSION).to_not be_nil
   end
 end

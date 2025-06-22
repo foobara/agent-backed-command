@@ -1,3 +1,5 @@
+require "foobara/agent"
+
 module Foobara
   class AgentBackedCommand < Foobara::Command
     class << self

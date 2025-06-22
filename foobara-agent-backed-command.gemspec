@@ -2,14 +2,14 @@ require_relative "version"
 
 Gem::Specification.new do |spec|
   spec.name = "foobara-agent-backed-command"
-  spec.version = Foobara::AgentBackedCommand::VERSION
+  spec.version = Foobara::AgentBackedCommandVersion::VERSION
   spec.authors = ["Miles Georgi"]
   spec.email = ["azimux@gmail.com"]
 
   spec.summary = "Provides a way to create a command without an execute method that is instead executed by a Foobara::Agent"
   spec.homepage = "https://github.com/foobara/agent-backed-command"
   spec.license = "MPL-2.0"
-  spec.required_ruby_version = Foobara::AgentBackedCommand::MINIMUM_RUBY_VERSION
+  spec.required_ruby_version = Foobara::AgentBackedCommandVersion::MINIMUM_RUBY_VERSION
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
     "CHANGELOG.md"
   ]
 
-  spec.add_dependency "foobara", "~> 0.0.131"
+  spec.add_dependency "foobara-agent", ">= 0.0.1"
 
   spec.require_paths = ["lib"]
   spec.metadata["rubygems_mfa_required"] = "true"
