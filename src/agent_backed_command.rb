@@ -4,12 +4,12 @@ module Foobara
   class AgentBackedCommand < Foobara::Command
     class << self
       # TODO: does this need to be a Concern for proper inheritance?
-      attr_accessor :verbose, :io_out, :io_err, :context, :agent_name, :llm_model
+      attr_accessor :verbose, :io_out, :io_err, :context, :agent_name, :llm_model, :max_llm_calls_per_minute
     end
 
     inputs do
       agent_options do
-        verbose :boolean, :allow_nil
+        verbose :boolean
         io_out :duck
         io_err :duck
         context Foobara::Agent::Context, :allow_nil, "The current context of the agent"
@@ -17,8 +17,8 @@ module Foobara
         llm_model :string,
                   :allow_nil,
                   one_of: Foobara::Ai::AnswerBot::Types::ModelEnum,
-                  default: "claude-3-7-sonnet-20250219",
                   description: "The model to use for the LLM"
+        max_llm_calls_per_minute :integer, :allow_nil
       end
     end
 
@@ -41,8 +41,11 @@ module Foobara
       command_classes = self.class.depends_on
 
       if command_classes.empty?
-        unless self.class.foobara_domain.global?
-          command_classes = self.class.foobara_domain.foobara_all_domain(mode: LookupMode::DIRECT)
+        # TODO: push this up into a helper in foobara/foobara
+        is_global_domain = self.class.foobara_domain.scoped_path.empty?
+        unless is_global_domain
+          command_classes = self.class.foobara_domain.foobara_all_command(mode: Namespace::LookupMode::DIRECT)
+          command_classes -= [self.class]
         end
       end
 
@@ -61,19 +64,24 @@ module Foobara
         io_err: agent_options&.[](:io_err) || self.class.io_err,
         agent_name:,
         context: agent_options&.[](:context) || self.class.context,
-        llm_model: agent_options&.[](:llm_model) || self.class.llm_model
+        llm_model: agent_options&.[](:llm_model) || self.class.llm_model,
+        max_llm_calls_per_minute: agent_options&.[](:max_llm_calls_per_minute) || self.class.max_llm_calls_per_minute
       )
     end
 
     def construct_goal_if_needed
-      unless goal
-        @goal = if description
-                  sentence = self.class.scoped_short_name
-                  sentence = Util.underscore(sentence)
-                  sentence = Util.humanize(sentence)
+      unless self.goal
+        goal = self.class.scoped_short_name
+        goal = Util.underscore(goal)
+        goal = Util.humanize(goal)
 
-                  "#{sentence}."
-                end
+        goal = "You are an agent backed command named #{self.class.scoped_short_name}. Your goal is: #{goal}."
+
+        if self.class.description
+          goal = "#{goal} If helpful, the command description is: #{self.class.description}. Accomplish this goal."
+        end
+
+        @goal = goal
       end
     end
 
@@ -94,7 +102,23 @@ module Foobara
     end
 
     def agent_result
-      agent_outcome.result
+      if result_type
+        if result_type.extends?(BuiltinTypes[:attributes])
+          if result_type.element_types.key?(:message_to_user)
+            if result_type.element_types.key?(:result_data)
+              agent_outcome.result
+            elsif agent_outcome.result[:result_data].is_a?(::Hash)
+              { message_to_user: agent_outcome.result[:message_to_user] }.merge(agent_outcome.result[:result_data])
+            else
+              agent_outcome.result
+            end
+          else
+            agent_outcome.result[:result_data]
+          end
+        else
+          agent_outcome.result[:result_data]
+        end
+      end
     end
 
     def agent

@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/foobara-demo/loan-origination.git
+  revision: 7d7ed408e4f9e19bb82925f2c87a278bec914142
+  specs:
+    foobara-demo-loan-origination (0.0.1)
+      foobara-local-files-crud-driver (~> 0.0.1)
+
 PATH
   remote: .
   specs:
@@ -46,12 +53,12 @@ GEM
       foobara-type-generator (~> 0.0.1)
       foobara-typescript-react-command-form-generator (~> 0.0.1)
       foobara-typescript-remote-command-generator (~> 0.0.1)
-    foobara (0.0.132)
+    foobara (0.0.134)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (>= 1.0.0)
       inheritable-thread-vars (~> 0.0.1)
-    foobara-agent (0.0.6)
+    foobara-agent (0.0.8)
       foobara (~> 0.0.126)
       foobara-llm-backed-command (~> 0.0.1)
     foobara-ai (0.0.12)
@@ -88,6 +95,8 @@ GEM
       foobara (~> 0.0.132)
       foobara-ai (~> 0.0.1)
       foobara-json-schema-generator (~> 0.0.6)
+    foobara-local-files-crud-driver (0.0.10)
+      foobara (~> 0.0.102)
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
@@ -204,7 +213,7 @@ GEM
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
       rspec-mocks (~> 3.13.0)
-    rspec-core (3.13.4)
+    rspec-core (3.13.5)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -265,6 +274,7 @@ DEPENDENCIES
   foob
   foobara-agent-backed-command!
   foobara-anthropic-api
+  foobara-demo-loan-origination!
   foobara-dotenv-loader (~> 0.0.1)
   foobara-open-ai-api
   foobara-rubocop-rules (>= 1.0.0)

@@ -5,6 +5,10 @@ ruby Foobara::AgentBackedCommandVersion::MINIMUM_RUBY_VERSION
 
 gemspec
 
+# gem "foobara", path: "../foobara"
+# gem "foobara-agent", path: "../agent"
+# gem "foobara-llm-backed-command", path: "../llm-backed-command"
+
 gem "foobara-dotenv-loader", "~> 0.0.1"
 
 gem "rake"
@@ -30,6 +34,7 @@ group :development, :test do
 end
 
 group :test do
+  gem "foobara-demo-loan-origination", github: "foobara-demo/loan-origination"
   gem "foobara-spec-helpers", "~> 0.0.1"
   gem "rspec"
   gem "rspec-its"
