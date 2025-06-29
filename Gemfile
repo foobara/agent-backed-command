@@ -7,6 +7,7 @@ gemspec
 
 # gem "foobara", path: "../foobara"
 # gem "foobara-agent", path: "../agent"
+# gem "foobara-http-api-command", path: "../http-api-command"
 # gem "foobara-llm-backed-command", path: "../llm-backed-command"
 
 gem "foobara-dotenv-loader", "~> 0.0.1"
@@ -22,7 +23,7 @@ group :development do
 end
 
 group :development, :test do
-  gem "foobara-anthropic-api"
+  gem "foobara-anthropic-api" # , path: "../anthropic-api"
   # gem "foobara-ollama-api"
   gem "foobara-open-ai-api"
 
@@ -35,6 +36,7 @@ end
 
 group :test do
   gem "foobara-demo-loan-origination", github: "foobara-demo/loan-origination"
+  # path: "../../foobara-demo/loan-origination"
   gem "foobara-spec-helpers", "~> 0.0.1"
   gem "rspec"
   gem "rspec-its"

@@ -41,7 +41,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:17 GMT
+      - Mon, 30 Jun 2025 18:06:39 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -53,27 +53,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:54:17Z'
+      - '2025-06-30T18:06:39Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:17Z'
+      - '2025-06-30T18:06:40Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:12Z'
+      - '2025-06-30T18:06:36Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '48000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:17Z'
+      - '2025-06-30T18:06:39Z'
       Request-Id:
-      - req_011CQeqKpAiD7BDVzofVq7GC
+      - req_011CQerGfcJ3nqotntQoQWX6
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -87,11 +87,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f870b7d7f7650-LAX
+      - 957f99363ef008d1-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01Lsa5Vh4PNkpVyehxaBBfg9","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":839,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":50,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:15 GMT
+      string: '{"id":"msg_01UjL2e2ByFjeZ2mBaDGn3wx","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":839,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":50,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:06:40 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -138,7 +138,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:21 GMT
+      - Mon, 30 Jun 2025 18:06:43 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -150,27 +150,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:54:21Z'
+      - '2025-06-30T18:06:43Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:21Z'
+      - '2025-06-30T18:06:43Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:18Z'
+      - '2025-06-30T18:06:40Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '48000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:21Z'
+      - '2025-06-30T18:06:43Z'
       Request-Id:
-      - req_011CQeqLFm6HGrfAvpGBL2XX
+      - req_011CQerGy7W6YYkdcQznWxbr
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -184,11 +184,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f8730993cd938-LAX
+      - 957f994f9d45091e-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_013aQNXu5rLmga9XAyftBtBs","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":1329,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":30,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:19 GMT
+      string: '{"id":"msg_01JUTe6UWbtiZw9GgynKfbgu","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":1329,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":30,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:06:44 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -236,7 +236,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:25 GMT
+      - Mon, 30 Jun 2025 18:06:48 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -248,27 +248,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:54:25Z'
+      - '2025-06-30T18:06:47Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:25Z'
+      - '2025-06-30T18:06:48Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:22Z'
+      - '2025-06-30T18:06:44Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '48000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:25Z'
+      - '2025-06-30T18:06:47Z'
       Request-Id:
-      - req_011CQeqLYbN61iosKs1mcHvx
+      - req_011CQerHGP5a6SAm5R3FRiFV
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -282,11 +282,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f87495c0ff7b5-LAX
+      - 957f99689f65cba6-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_019W9FEBw6K1zn1uHBLb2Vcs","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::FindCreditPolicy\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":1474,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":42,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:22 GMT
+      string: '{"id":"msg_018LxY6yWhbh9m9W68DRfMh2","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::FindCreditPolicy\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":1474,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":42,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:06:48 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -339,7 +339,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:29 GMT
+      - Mon, 30 Jun 2025 18:06:51 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -351,27 +351,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '39000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:54:28Z'
+      - '2025-06-30T18:06:51Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:29Z'
+      - '2025-06-30T18:06:51Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:26Z'
+      - '2025-06-30T18:06:48Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '47000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:28Z'
+      - '2025-06-30T18:06:51Z'
       Request-Id:
-      - req_011CQeqLnwKPgDWDBFaF6DUa
+      - req_011CQerHZCcDakVGUyBaTnqK
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -385,11 +385,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f875e6d5af8cf-LAX
+      - 957f998189ae7d74-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01FgGZ6GKitHLeNQwLvbWExZ","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindCreditPolicy\",\"inputs\":{\"credit_policy\":1}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":1760,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":31,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:27 GMT
+      string: '{"id":"msg_01DCEbzsrXDopayvEx2AQ3Jf","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindCreditPolicy\",\"inputs\":{\"credit_policy\":1}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":1760,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":31,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:06:51 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -443,7 +443,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:34 GMT
+      - Mon, 30 Jun 2025 18:06:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -455,27 +455,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:54:34Z'
+      - '2025-06-30T18:06:55Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:34Z'
+      - '2025-06-30T18:06:55Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:30Z'
+      - '2025-06-30T18:06:52Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '48000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:34Z'
+      - '2025-06-30T18:06:55Z'
       Request-Id:
-      - req_011CQeqM89UHovp6EiTSnF2P
+      - req_011CQerHoU6zwFEXtjKhW9Zx
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -489,11 +489,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f877a6d8525da-LAX
+      - 957f9996496e08fe-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_015nkstzmfY26XE7ofQATQqg","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::DenyLoanFile\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":1839,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":43,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:32 GMT
+      string: '{"id":"msg_01EPrU6xjbWfN9YSftxmGmJG","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::DenyLoanFile\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":1839,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":43,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:06:55 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -551,7 +551,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:38 GMT
+      - Mon, 30 Jun 2025 18:07:06 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -561,29 +561,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '39000'
+      - '40000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:54:39Z'
+      - '2025-06-30T18:07:03Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:38Z'
+      - '2025-06-30T18:07:06Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:36Z'
+      - '2025-06-30T18:06:59Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '47000'
+      - '48000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:38Z'
+      - '2025-06-30T18:07:03Z'
       Request-Id:
-      - req_011CQeqMXJzmohEPMLFoJNkR
+      - req_011CQerJBhZxodifLM8hufZe
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -597,11 +597,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f879c3a322acb-LAX
+      - 957f99b51b0fb7fd-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01WFnR5fdmRMrYjUZYbccBLW","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::DenyLoanFile\",\"inputs\":{\"loan_file\":1,\"credit_score_used\":650,\"denied_reasons\":[\"low_credit_score\"]}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":2389,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":52,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:36 GMT
+      string: '{"id":"msg_016fbV7DpXBPwAj5k3evVPxw","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::DenyLoanFile\",\"inputs\":{\"loan_file\":1,\"credit_score_used\":650,\"denied_reasons\":[\"low_credit_score\"]}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":2389,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":52,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:07 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -661,7 +661,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:42 GMT
+      - Mon, 30 Jun 2025 18:07:10 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -671,29 +671,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '39000'
+      - '38000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:54:43Z'
+      - '2025-06-30T18:07:12Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:43Z'
+      - '2025-06-30T18:07:10Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:39Z'
+      - '2025-06-30T18:07:08Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '47000'
+      - '46000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:43Z'
+      - '2025-06-30T18:07:10Z'
       Request-Id:
-      - req_011CQeqMopBfNXEsNUxnLEhe
+      - req_011CQerJyXN7SjWKVmi82fPt
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -707,11 +707,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f87b329210fcb-LAX
+      - 957f99f97a2af0e0-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01WfT3a6vDHMXB9tvdo2E5bC","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::StartUnderwriterReview\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":2588,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":45,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:40 GMT
+      string: '{"id":"msg_01UzW3XCGJobCxEBF1EmJgJJ","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::StartUnderwriterReview\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":2588,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":45,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:10 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -775,7 +775,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:46 GMT
+      - Mon, 30 Jun 2025 18:07:14 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -787,27 +787,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '38000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:54:48Z'
+      - '2025-06-30T18:07:16Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:46Z'
+      - '2025-06-30T18:07:14Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:43Z'
+      - '2025-06-30T18:07:10Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '46000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:46Z'
+      - '2025-06-30T18:07:14Z'
       Request-Id:
-      - req_011CQeqN78UxPfNBbvebn2Jd
+      - req_011CQerKBoYtVjHH85jsgxeD
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -821,11 +821,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f87cd3d7c092c-LAX
+      - 957f9a0b99dc2ecc-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01QH6esbHXYNPCrCDwUZJhTb","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::StartUnderwriterReview\",\"inputs\":{\"loan_file\":1}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3084,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":34,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:44 GMT
+      string: '{"id":"msg_01EzGS8BsbMAngy1kzarPmuD","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::StartUnderwriterReview\",\"inputs\":{\"loan_file\":1}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3084,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":34,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:14 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -890,7 +890,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:55 GMT
+      - Mon, 30 Jun 2025 18:07:25 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -902,27 +902,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '39000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:54:55Z'
+      - '2025-06-30T18:07:26Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:55Z'
+      - '2025-06-30T18:07:25Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:50Z'
+      - '2025-06-30T18:07:22Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '47000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:55Z'
+      - '2025-06-30T18:07:25Z'
       Request-Id:
-      - req_011CQeqNcy6hBuABtkrJt32i
+      - req_011CQerL1na6wU4m5pnb6hnP
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -936,11 +936,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f87e5785508cf-LAX
+      - 957f9a290c505269-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01CPyoA4TC1Nvobk45LsJ7kn","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::DenyLoanFile\",\"inputs\":{\"loan_file\":1,\"credit_score_used\":650,\"denied_reasons\":[\"low_credit_score\"]}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3233,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":52,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:53 GMT
+      string: '{"id":"msg_01Nof5CbK1bwVXUwZ21p3Wxr","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::DenyLoanFile\",\"inputs\":{\"loan_file\":1,\"credit_score_used\":650,\"denied_reasons\":[\"low_credit_score\"]}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3233,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":52,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:25 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -1004,7 +1004,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:54:59 GMT
+      - Mon, 30 Jun 2025 18:07:33 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1016,27 +1016,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '38000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:01Z'
+      - '2025-06-30T18:07:35Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:54:59Z'
+      - '2025-06-30T18:07:33Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:54:56Z'
+      - '2025-06-30T18:07:30Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '46000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:54:59Z'
+      - '2025-06-30T18:07:33Z'
       Request-Id:
-      - req_011CQeqP5ive8HEocHEsiJ2A
+      - req_011CQerLdyBb9prmChKUSdWA
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -1050,11 +1050,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f881fd9107d89-LAX
+      - 957f9a70ef0a5287-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01FAu2XE1V6pWY9nhbkGk8BH","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3230,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":30,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:54:57 GMT
+      string: '{"id":"msg_012TVmmV7AoRmXudh9EiDQbm","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3230,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":30,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:33 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -1119,7 +1119,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:03 GMT
+      - Mon, 30 Jun 2025 18:07:38 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1129,29 +1129,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '37000'
+      - '38000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:06Z'
+      - '2025-06-30T18:07:40Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:03Z'
+      - '2025-06-30T18:07:38Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:01Z'
+      - '2025-06-30T18:07:35Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '45000'
+      - '46000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:03Z'
+      - '2025-06-30T18:07:38Z'
       Request-Id:
-      - req_011CQeqPQ5yjEPoTA7UJeoh3
+      - req_011CQerLySTuLcLQNqdfLuGm
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -1165,11 +1165,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f883a6f047bad-LAX
+      - 957f9aa23875cdfb-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01SAdQ2ZX75N6FKW9RGT3SMA","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindCreditPolicy\",\"inputs\":{\"credit_policy\":2}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3377,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":31,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:01 GMT
+      string: '{"id":"msg_01S1XNJcqF1MRLxBi2dLMjX9","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindCreditPolicy\",\"inputs\":{\"credit_policy\":2}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3377,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":31,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:38 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -1235,7 +1235,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:11 GMT
+      - Mon, 30 Jun 2025 18:07:41 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1245,29 +1245,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '39000'
+      - '37000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:12Z'
+      - '2025-06-30T18:07:45Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:11Z'
+      - '2025-06-30T18:07:41Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:05Z'
+      - '2025-06-30T18:07:38Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '47000'
+      - '45000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:11Z'
+      - '2025-06-30T18:07:41Z'
       Request-Id:
-      - req_011CQeqPgsXShmRSQSRpKA7X
+      - req_011CQerMFpheUbTbViRnT6Kc
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -1281,11 +1281,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f8851a9b8cb9c-LAX
+      - 957f9abafb21d7cc-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01Efn4Lx1cpNJfhDNt9iX7TS","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::StartUnderwriterReview\",\"inputs\":{\"loan_file\":2}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3456,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":34,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:09 GMT
+      string: '{"id":"msg_013VuYA88eGQSDXYB4DrtSdL","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::StartUnderwriterReview\",\"inputs\":{\"loan_file\":2}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3456,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":34,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:41 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -1352,7 +1352,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:14 GMT
+      - Mon, 30 Jun 2025 18:07:46 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1362,29 +1362,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '38000'
+      - '36000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:17Z'
+      - '2025-06-30T18:07:50Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:15Z'
+      - '2025-06-30T18:07:46Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:12Z'
+      - '2025-06-30T18:07:42Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '46000'
+      - '44000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:15Z'
+      - '2025-06-30T18:07:46Z'
       Request-Id:
-      - req_011CQeqQDaygr9TeF5siTX58
+      - req_011CQerMUddiUo2pewC9S7BU
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -1398,11 +1398,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f88809adf2f5e-LAX
+      - 957f9acdcf576a2b-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01JkFoeLvq8wtZ7QmutwpX9T","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::DenyLoanFile\",\"inputs\":{\"loan_file\":2,\"credit_score_used\":750,\"denied_reasons\":[\"insufficient_pay_stubs_provided\"]}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3607,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":55,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:12 GMT
+      string: '{"id":"msg_01SKqf22co2dXbEur8xMErAX","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::DenyLoanFile\",\"inputs\":{\"loan_file\":2,\"credit_score_used\":750,\"denied_reasons\":[\"insufficient_pay_stubs_provided\"]}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3607,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":55,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:46 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -1470,7 +1470,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:17 GMT
+      - Mon, 30 Jun 2025 18:07:50 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1482,27 +1482,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '36000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:23Z'
+      - '2025-06-30T18:07:56Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:17Z'
+      - '2025-06-30T18:07:50Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:15Z'
+      - '2025-06-30T18:07:47Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '44000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:17Z'
+      - '2025-06-30T18:07:50Z'
       Request-Id:
-      - req_011CQeqQTfofzgSymLFdH5BB
+      - req_011CQerMsEgEtLLyd4Lg2HvT
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -1516,11 +1516,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f88952fa1dbdd-LAX
+      - 957f9aeeaa0e7d27-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01U4jh5REUn968o7LTaBMT56","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3811,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":30,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:15 GMT
+      string: '{"id":"msg_01FqJ64gPLPmtb13wnZJd8Nj","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3811,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":30,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:50 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -1589,7 +1589,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:23 GMT
+      - Mon, 30 Jun 2025 18:07:59 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1599,29 +1599,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '36000'
+      - '37000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:29Z'
+      - '2025-06-30T18:08:02Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:23Z'
+      - '2025-06-30T18:07:59Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:18Z'
+      - '2025-06-30T18:07:51Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '44000'
+      - '45000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:23Z'
+      - '2025-06-30T18:07:59Z'
       Request-Id:
-      - req_011CQeqQhbDbTWAnvAvvMwyz
+      - req_011CQerNCVZLS87vroq6YNVe
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -1635,11 +1635,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f88a96e0e7d17-LAX
+      - 957f9b096dbddb92-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_0182Cg8g5VfLyHPjEyQJaRsL","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindCreditPolicy\",\"inputs\":{\"credit_policy\":3}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3958,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":31,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:21 GMT
+      string: '{"id":"msg_01MsewHkZUnupCeV2LXLNwqr","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindCreditPolicy\",\"inputs\":{\"credit_policy\":3}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":3958,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":31,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:07:59 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -1709,7 +1709,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:26 GMT
+      - Mon, 30 Jun 2025 18:08:05 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1719,29 +1719,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '34000'
+      - '37000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:35Z'
+      - '2025-06-30T18:08:08Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:26Z'
+      - '2025-06-30T18:08:05Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:24Z'
+      - '2025-06-30T18:08:02Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '42000'
+      - '45000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:26Z'
+      - '2025-06-30T18:08:05Z'
       Request-Id:
-      - req_011CQeqR6NBTqX8d5x6AFk1h
+      - req_011CQerNzYF6qtodP1fBB1ZR
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -1755,11 +1755,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f88caaa9a2f09-LAX
+      - 957f9b42ed1a2ad8-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01MTk4kpkf7UFJpmH2aGo9h3","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::StartUnderwriterReview\",\"inputs\":{\"loan_file\":3}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4037,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":34,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:24 GMT
+      string: '{"id":"msg_01M9uBiCdLPLGYVm6TmxN1ma","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::StartUnderwriterReview\",\"inputs\":{\"loan_file\":3}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4037,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":34,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:08:05 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -1830,7 +1830,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:29 GMT
+      - Mon, 30 Jun 2025 18:08:14 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1840,29 +1840,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '32000'
+      - '38000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:41Z'
+      - '2025-06-30T18:08:14Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:30Z'
+      - '2025-06-30T18:08:14Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:27Z'
+      - '2025-06-30T18:08:08Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '40000'
+      - '46000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:30Z'
+      - '2025-06-30T18:08:14Z'
       Request-Id:
-      - req_011CQeqRKN2JbLHKWgmUx5YF
+      - req_011CQerPSFpJ2p1CFiYi7rhs
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -1876,11 +1876,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f88dde92b7c6b-LAX
+      - 957f9b666cdb0926-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01AKcvPonKH6zQWdvUm1Xtx6","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::ApproveLoanFile\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4188,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":43,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:27 GMT
+      string: '{"id":"msg_017LXRrKY8a8yvaQqroe7YjW","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"FoobaraDemo::LoanOrigination::ApproveLoanFile\"}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4188,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":43,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:08:14 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -1955,7 +1955,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:33 GMT
+      - Mon, 30 Jun 2025 18:08:23 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1965,29 +1965,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '29000'
+      - '38000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:48Z'
+      - '2025-06-30T18:08:23Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:33Z'
+      - '2025-06-30T18:08:23Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:31Z'
+      - '2025-06-30T18:08:16Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '37000'
+      - '46000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:33Z'
+      - '2025-06-30T18:08:23Z'
       Request-Id:
-      - req_011CQeqRc3s6P6kFxeG2K3CP
+      - req_011CQerPzJtG9zEXCnGyipJi
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -2001,11 +2001,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f88f56b427cf7-LAX
+      - 957f9ba1da4c2f44-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01PcJyUfyBGFaw2zhnZvhXGY","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::ApproveLoanFile\",\"inputs\":{\"loan_file\":3,\"credit_score_used\":750}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4698,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":40,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:31 GMT
+      string: '{"id":"msg_01VjtB1L2E9YJPEsbUQsWJBe","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::ApproveLoanFile\",\"inputs\":{\"loan_file\":3,\"credit_score_used\":750}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4698,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":40,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:08:24 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -2081,7 +2081,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:38 GMT
+      - Mon, 30 Jun 2025 18:08:28 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -2091,29 +2091,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '28000'
+      - '37000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:55:56Z'
+      - '2025-06-30T18:08:32Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:38Z'
+      - '2025-06-30T18:08:28Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:35Z'
+      - '2025-06-30T18:08:25Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '36000'
+      - '45000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:38Z'
+      - '2025-06-30T18:08:28Z'
       Request-Id:
-      - req_011CQeqRsRLTD6sQz7V4Z7DL
+      - req_011CQerQfQN8uazrmNHuadVv
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -2127,11 +2127,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f890ae89b2ec9-LAX
+      - 957f9bdb882c7c2a-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01LdM21hr187PSyCRc1FDWHy","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4875,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":30,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:36 GMT
+      string: '{"id":"msg_01JSFs1MNwDX2zaeJzXLjUqF","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4875,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":30,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:08:28 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -2207,7 +2207,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:43 GMT
+      - Mon, 30 Jun 2025 18:08:33 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -2217,29 +2217,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '25000'
+      - '35000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:56:03Z'
+      - '2025-06-30T18:08:39Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:43Z'
+      - '2025-06-30T18:08:33Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:39Z'
+      - '2025-06-30T18:08:30Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '33000'
+      - '43000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:43Z'
+      - '2025-06-30T18:08:33Z'
       Request-Id:
-      - req_011CQeqSCw6DE1QhPDqQcMBV
+      - req_011CQerR1FxnDG8LtJm4EaYa
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -2253,11 +2253,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f89293f2a102c-LAX
+      - 957f9bf8ac267c24-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01VZqFwiMmgugcgQgQ6jjpyb","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::ReviewAllLoanFilesNeedingReviewAgent::NotifyUserThatCurrentGoalHasBeenAccomplished\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4917,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":42,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:41 GMT
+      string: '{"id":"msg_01ME9z6YFy6nz18e5A34t7JS","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::ReviewAllLoanFilesNeedingReviewAgent::NotifyUserThatCurrentGoalHasBeenAccomplished\"}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":4917,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":42,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:08:33 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -2301,9 +2301,13 @@ http_interactions:
         of the employer that issued this paycheck\"}}}},\"credit_scores\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"score\":{\"type\":\"number\"},\"reporting_agency\":{\"type\":\"string\",\"enum\":[\"equifax\",\"experian\",\"transunion\"]}}}},\"underwriter_decision\":{\"type\":[\"object\",\"null\"],\"required\":[\"credit_score_used\",\"decision\"],\"properties\":{\"decision\":{\"type\":\"string\",\"enum\":[\"approved\",\"denied\"]},\"credit_score_used\":{\"type\":\"number\"},\"denied_reasons\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"insufficient_pay_stubs_provided\",\"low_credit_score\"]}}}},\"credit_policy\":{\"type\":\"number\"}}}}}"},{"role":"assistant","content":"{\"command\":\"FoobaraDemo::LoanOrigination::ApproveLoanFile\",\"inputs\":{\"loan_file\":3,\"credit_score_used\":750}}"},{"role":"user","content":"{\"success\":true,\"result\":{\"id\":3,\"state\":\"drafting_docs\",\"pay_stubs\":[{\"amount\":3000,\"date\":\"2025-06-25\",\"employer\":\"Some
         Employer\"}],\"credit_scores\":[{\"reporting_agency\":\"experian\",\"score\":600},{\"reporting_agency\":\"equifax\",\"score\":650},{\"reporting_agency\":\"transunion\",\"score\":750}],\"loan_application\":{\"applicant\":{\"name\":\"Fumiko\"}},\"credit_policy\":3,\"underwriter_decision\":{\"decision\":\"approved\",\"credit_score_used\":750}}}"},{"role":"assistant","content":"{\"command\":\"FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview\"}"},{"role":"user","content":"{\"success\":true,\"result\":null}"},{"role":"assistant","content":"{\"command\":\"Foobara::Agent::ReviewAllLoanFilesNeedingReviewAgent::NotifyUserThatCurrentGoalHasBeenAccomplished\"}"},{"role":"user","content":"{\"success\":false,\"errors_hash\":{\"data.cannot_cast\":{\"key\":\"data.cannot_cast\",\"path\":[],\"runtime_path\":[],\"category\":\"data\",\"symbol\":\"cannot_cast\",\"message\":\"Cannot
         cast nil to an attributes. Expected it to be a an array of pairs, or be a
-        hash with symbolizable keys\",\"context\":{\"cast_to\":{\"type\":\"attributes\",\"element_type_declarations\":{\"result\":{\"element_type_declaration\":{\"type\":\"attributes\",\"element_type_declarations\":{\"applicant_name\":{\"type\":\"string\"},\"underwriter_decision\":{\"type\":\"FoobaraDemo::LoanOrigination::decision\"}},\"required\":[\"applicant_name\",\"underwriter_decision\"]},\"type\":\"array\"}},\"required\":[\"result\"]},\"value\":null},\"is_fatal\":true}}}"},{"role":"assistant","content":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"Foobara::Agent::ReviewAllLoanFilesNeedingReviewAgent::NotifyUserThatCurrentGoalHasBeenAccomplished\"}}"},{"role":"user","content":"{\"success\":true,\"result\":{\"full_command_name\":\"Foobara::Agent::ReviewAllLoanFilesNeedingReviewAgent::NotifyUserThatCurrentGoalHasBeenAccomplished\",\"description\":\"Notifies
+        hash with symbolizable keys\",\"context\":{\"cast_to\":{\"type\":\"attributes\",\"element_type_declarations\":{\"result\":{\"type\":\"attributes\",\"element_type_declarations\":{\"approved_count\":{\"type\":\"integer\"},\"denied_count\":{\"type\":\"integer\"}},\"required\":[\"approved_count\",\"denied_count\"]},\"message_to_user\":{\"description\":\"Message
+        to the user about what was done\",\"type\":\"string\"}},\"required\":[\"message_to_user\",\"result\"]},\"value\":null},\"is_fatal\":true}}}"},{"role":"assistant","content":"{\"command\":\"Foobara::Agent::DescribeCommand\",\"inputs\":{\"command_name\":\"Foobara::Agent::ReviewAllLoanFilesNeedingReviewAgent::NotifyUserThatCurrentGoalHasBeenAccomplished\"}}"},{"role":"user","content":"{\"success\":true,\"result\":{\"full_command_name\":\"Foobara::Agent::ReviewAllLoanFilesNeedingReviewAgent::NotifyUserThatCurrentGoalHasBeenAccomplished\",\"description\":\"Notifies
         the user that the current goal has been accomplished and returns a final result
-        formatted according to the result schema. The user might issue a new goal.\",\"inputs_type\":{\"type\":\"object\",\"required\":[\"result\"],\"properties\":{\"result\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"required\":[\"applicant_name\",\"underwriter_decision\"],\"properties\":{\"applicant_name\":{\"type\":\"string\"},\"underwriter_decision\":{\"type\":\"string\",\"enum\":[\"approved\",\"denied\"]}}}}}},\"result_type\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"required\":[\"applicant_name\",\"underwriter_decision\"],\"properties\":{\"applicant_name\":{\"type\":\"string\"},\"underwriter_decision\":{\"type\":\"string\",\"enum\":[\"approved\",\"denied\"]}}}}}}"}],"temperature":0.0,"system":"You
+        formatted according to the result schema and a message to the user. The user
+        might issue a new goal.\",\"inputs_type\":{\"type\":\"object\",\"required\":[\"message_to_user\",\"result\"],\"properties\":{\"result\":{\"type\":\"object\",\"required\":[\"approved_count\",\"denied_count\"],\"properties\":{\"approved_count\":{\"type\":\"number\"},\"denied_count\":{\"type\":\"number\"}}},\"message_to_user\":{\"type\":\"string\",\"description\":\"Message
+        to the user about what was done\"}}},\"result_type\":{\"type\":\"object\",\"required\":[\"message_to_user\",\"result\"],\"properties\":{\"result\":{\"type\":\"object\",\"required\":[\"approved_count\",\"denied_count\"],\"properties\":{\"approved_count\":{\"type\":\"number\"},\"denied_count\":{\"type\":\"number\"}}},\"message_to_user\":{\"type\":\"string\",\"description\":\"Message
+        to the user about what was done\"}}}}}"}],"temperature":0.0,"system":"You
         are the implementation of a command called Foobara::Agent::DetermineNextCommandNameAndInputs
         which has the following description:\n\nReturns the name of the next command
         to run and its inputs given the progress  towards accomplishing the current
@@ -2337,7 +2341,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 Jun 2025 17:55:48 GMT
+      - Mon, 30 Jun 2025 18:08:40 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -2347,29 +2351,29 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Limit:
       - '40000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '24000'
+      - '33000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-30T17:56:11Z'
+      - '2025-06-30T18:08:48Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '8000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-30T17:55:48Z'
+      - '2025-06-30T18:08:41Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '1000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-30T17:55:45Z'
+      - '2025-06-30T18:08:35Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '48000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '32000'
+      - '41000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-30T17:55:48Z'
+      - '2025-06-30T18:08:41Z'
       Request-Id:
-      - req_011CQeqSeDce4ALa8WwNDwg1
+      - req_011CQerRQbQpTAGrEa6FEM7C
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
@@ -2383,9 +2387,14 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 957f894ce837cb82-LAX
+      - 957f9c18cde4135e-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01V3GXNQ2Jndy5E8nDi6advK","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::ReviewAllLoanFilesNeedingReviewAgent::NotifyUserThatCurrentGoalHasBeenAccomplished\",\"inputs\":{\"result\":[{\"applicant_name\":\"Barbara\",\"underwriter_decision\":\"denied\"},{\"applicant_name\":\"Basil\",\"underwriter_decision\":\"denied\"},{\"applicant_name\":\"Fumiko\",\"underwriter_decision\":\"approved\"}]}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":5444,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":99,"service_tier":"standard"}}'
-  recorded_at: Mon, 30 Jun 2025 17:55:46 GMT
+      string: '{"id":"msg_01GbKJoQr9KK6gag1pVsFx3Z","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"{\"command\":\"Foobara::Agent::ReviewAllLoanFilesNeedingReviewAgent::NotifyUserThatCurrentGoalHasBeenAccomplished\",\"inputs\":{\"message_to_user\":\"I
+        have completed reviewing all loan files that needed review. Out of 3 loan
+        files reviewed:\\n- 1 was approved (Fumiko''s loan file met all requirements
+        for Bank C)\\n- 2 were denied (Barbara''s loan file had insufficient credit
+        score for Bank A, and Basil''s loan file had insufficient pay stubs for Bank
+        B)\",\"result\":{\"approved_count\":1,\"denied_count\":2}}}"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":5489,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":145,"service_tier":"standard"}}'
+  recorded_at: Mon, 30 Jun 2025 18:08:40 GMT
 recorded_with: VCR 6.3.1

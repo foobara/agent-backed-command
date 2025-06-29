@@ -2,6 +2,11 @@ require "foobara/agent"
 
 module Foobara
   class AgentBackedCommand < Foobara::Command
+    # TODO: grab these right off Foobara::AccomplishGoal somehow?
+    possible_error :gave_up, context: { reason: :string }, message: "Gave up."
+    possible_error :too_many_command_calls,
+                   context: { maximum_command_calls: :integer }
+
     class << self
       # TODO: does this need to be a Concern for proper inheritance?
       attr_accessor :verbose, :io_out, :io_err, :context, :agent_name, :llm_model, :max_llm_calls_per_minute
@@ -33,7 +38,7 @@ module Foobara
     end
 
     attr_writer :goal, :agent
-    attr_accessor :agent_outcome
+    attr_accessor :agent_outcome, :returns_message_to_user, :returns_result_data, :result_data_is_merged
 
     def build_agent_if_needed
       return if agent
@@ -49,16 +54,42 @@ module Foobara
         end
       end
 
-      include_message_to_user_in_result = if result_type.extends?(BuiltinTypes[:attributes])
-                                            result_type.element_types.key?(:message_to_user)
-                                          end
+      result_type = self.class.result_type
+
+      agent_result_type = if result_type.extends?(BuiltinTypes[:attributes]) &&
+                             result_type.element_types.key?(:message_to_user)
+                            self.returns_message_to_user = true
+                            include_message_to_user_in_result = true
+
+                            if result_type.element_types.size == 1
+                              nil
+                            else
+                              self.returns_result_data = true
+
+                              if result_type.element_types.keys.sort == [:message_to_user, :result_data]
+                                result_type.element_types[:result_data]
+                              else
+                                self.result_data_is_merged = true
+
+                                declaration = result_type.declaration_data
+                                declaration = TypeDeclarations::Attributes.reject(declaration, :message_to_user)
+                                result_type.created_in_namespace.foobara_type_from_declaration(declaration)
+                              end
+                            end
+                          else
+                            include_message_to_user_in_result = false
+                            if result_type
+                              self.returns_result_data = true
+                              result_type
+                            end
+                          end
 
       agent_name = agent_options&.[](:agent_name) || self.class.agent_name || "#{self.class.scoped_short_name}Agent"
 
-      @agent = Foobara::Agent.new(
+      self.agent = Foobara::Agent.new(
         command_classes:,
         include_message_to_user_in_result:,
-        result_type: self.class.result_type,
+        result_type: agent_result_type,
         verbose: agent_options&.[](:verbose) || self.class.verbose,
         io_out: agent_options&.[](:io_out) || self.class.io_out,
         io_err: agent_options&.[](:io_err) || self.class.io_err,
@@ -91,33 +122,38 @@ module Foobara
 
     def handle_agent_outcome
       unless agent_outcome.success?
+        # TODO: test this code path maybe with a stub that forces failure
+        # :nocov:
         agent_outcome.each_error do |error|
           add_error(error)
-        rescue HaltError
+        rescue Halt
           nil
         end
 
         halt!
+        # :nocov:
       end
     end
 
     def agent_result
-      if result_type
-        if result_type.extends?(BuiltinTypes[:attributes])
-          if result_type.element_types.key?(:message_to_user)
-            if result_type.element_types.key?(:result_data)
-              agent_outcome.result
-            elsif agent_outcome.result[:result_data].is_a?(::Hash)
-              { message_to_user: agent_outcome.result[:message_to_user] }.merge(agent_outcome.result[:result_data])
-            else
-              agent_outcome.result
-            end
+      result = agent_outcome.result
+
+      if returns_message_to_user
+        message_to_user = result[:message_to_user]
+
+        if returns_result_data
+          result_data = result[:result_data]
+
+          if result_data_is_merged
+            result_data.merge(message_to_user:)
           else
-            agent_outcome.result[:result_data]
+            { message_to_user:, result_data: }
           end
         else
-          agent_outcome.result[:result_data]
+          { message_to_user: }
         end
+      elsif returns_result_data
+        result[:result_data]
       end
     end
 
