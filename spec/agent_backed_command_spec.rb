@@ -15,7 +15,6 @@ RSpec.describe Foobara::AgentBackedCommand do
   let(:inputs) do
     {
       agent_options: {
-        verbose:,
         max_llm_calls_per_minute:
       }
     }
@@ -51,6 +50,7 @@ RSpec.describe Foobara::AgentBackedCommand do
 
     before do
       FoobaraDemo::LoanOrigination::Demo::PrepareDemoRecords.run!
+      command_class.verbose verbose
     end
 
     it "reviews all of the loan files needing review", vcr: { record: :none } do

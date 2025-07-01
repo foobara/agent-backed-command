@@ -9,7 +9,15 @@ module Foobara
 
     class << self
       # TODO: does this need to be a Concern for proper inheritance?
-      attr_accessor :verbose, :io_out, :io_err, :context, :agent_name, :llm_model, :max_llm_calls_per_minute
+      attr_accessor :is_verbose, :io_out, :io_err, :context, :agent_name, :llm_model, :max_llm_calls_per_minute
+
+      def verbose(value = true)
+        self.is_verbose = value
+      end
+
+      def verbose?
+        is_verbose
+      end
     end
 
     inputs do
@@ -86,11 +94,14 @@ module Foobara
 
       agent_name = agent_options&.[](:agent_name) || self.class.agent_name || "#{self.class.scoped_short_name}Agent"
 
+      verbose = agent_options&.[](:verbose)
+      verbose = self.class.verbose? if verbose.nil?
+
       self.agent = Foobara::Agent.new(
         command_classes:,
         include_message_to_user_in_result:,
         result_type: agent_result_type,
-        verbose: agent_options&.[](:verbose) || self.class.verbose,
+        verbose:,
         io_out: agent_options&.[](:io_out) || self.class.io_out,
         io_err: agent_options&.[](:io_err) || self.class.io_err,
         agent_name:,
