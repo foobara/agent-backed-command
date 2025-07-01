@@ -70,6 +70,27 @@ RSpec.describe Foobara::AgentBackedCommand do
       expect(loan_files.map(&:state)).to contain_exactly(:drafting_docs, :denied, :denied)
     end
 
+    context "when not using a result type" do
+      let(:command_class) do
+        stub_class("FoobaraDemo::LoanOrigination::ReviewAllLoanFilesNeedingReview", described_class) do
+          self.llm_model = "claude-opus-4-20250514"
+        end
+      end
+
+      it "reviews all of the loan files needing review", vcr: { record: :none } do
+        loan_files = FoobaraDemo::LoanOrigination::FindAllLoanFiles.run!
+
+        expect(loan_files.map(&:state)).to all eq(:needs_review)
+
+        expect(outcome).to be_success
+        expect(result).to be_nil
+
+        loan_files = FoobaraDemo::LoanOrigination::FindAllLoanFiles.run!
+
+        expect(loan_files.map(&:state)).to contain_exactly(:drafting_docs, :denied, :denied)
+      end
+    end
+
     context "when using message_to_user" do
       before do
         command_class.result do

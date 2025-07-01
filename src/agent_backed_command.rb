@@ -64,7 +64,7 @@ module Foobara
 
       result_type = self.class.result_type
 
-      agent_result_type = if result_type.extends?(BuiltinTypes[:attributes]) &&
+      agent_result_type = if result_type&.extends?(BuiltinTypes[:attributes]) &&
                              result_type.element_types.key?(:message_to_user)
                             self.returns_message_to_user = true
                             include_message_to_user_in_result = true
