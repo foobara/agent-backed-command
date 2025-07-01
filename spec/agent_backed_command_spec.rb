@@ -72,9 +72,7 @@ RSpec.describe Foobara::AgentBackedCommand do
 
     context "when not using a result type" do
       let(:command_class) do
-        stub_class("FoobaraDemo::LoanOrigination::ReviewAllLoanFilesNeedingReview", described_class) do
-          self.llm_model = "claude-opus-4-20250514"
-        end
+        stub_class("FoobaraDemo::LoanOrigination::ReviewAllLoanFilesNeedingReview", described_class)
       end
 
       it "reviews all of the loan files needing review", vcr: { record: :none } do
