@@ -120,7 +120,29 @@ module Foobara
         goal = "You are an agent backed command named #{self.class.scoped_short_name}. Your goal is: #{goal}."
 
         if self.class.description
-          goal = "#{goal} If helpful, the command description is: #{self.class.description}. Accomplish this goal."
+          goal += " The command description is: #{self.class.description}."
+        end
+
+        inputs_type = self.class.inputs_type
+        if inputs_type
+          input_keys = inputs_type.element_types.keys - [:agent_options]
+
+          unless input_keys.empty?
+            domain = inputs_type.created_in_namespace.foobara_domain
+            inputs_type = TypeDeclarations::Attributes.reject(inputs_type.declaration_data, :agent_options)
+            inputs_type = domain.foobara_type_from_declaration(inputs_type)
+
+            json_inputs_type = JsonSchemaGenerator.to_json_schema(
+              inputs_type,
+              association_depth: JsonSchemaGenerator::AssociationDepth::ATOM
+            )
+            goal += " The inputs to this command have the following type:\n\n#{json_inputs_type}\n\n"
+
+            serializer = Foobara::CommandConnectors::Serializers::AtomicSerializer.new
+            inputs_json = serializer.serialize(inputs.except(:agent_options))
+            inputs_json = JSON.fast_generate(inputs_json)
+            goal += "You have been ran with the following inputs:\n\n#{inputs_json}"
+          end
         end
 
         @goal = goal
