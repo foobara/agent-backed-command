@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/foobara-demo/loan-origination.git
-  revision: 605b7105335c0fa840ee24b315cc4be8a6360143
+  revision: f8c45410d2df56cb1f19d797d5b2e851096e367d
   specs:
     foobara-demo-loan-origination (0.0.1)
       foobara-local-files-crud-driver (~> 0.0.1)

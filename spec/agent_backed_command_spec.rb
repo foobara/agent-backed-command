@@ -183,5 +183,54 @@ RSpec.describe Foobara::AgentBackedCommand do
         end
       end
     end
+
+    context "with a AgentBackedCommand takes inputs" do
+      let(:command_class) do
+        v = verbose
+
+        stub_class("FoobaraDemo::LoanOrigination::ReviewLoanFile", described_class) do
+          description "Checks the LoanFile against all requirements in its CreditPolicy. " \
+                      "Denies the LoanFile that has any unsatisfied requirements."
+
+          add_inputs do
+            loan_file FoobaraDemo::LoanOrigination::LoanFile, :required
+          end
+
+          result FoobaraDemo::LoanOrigination::LoanFile::UnderwriterDecision
+
+          depends_on FoobaraDemo::LoanOrigination::StartUnderwriterReview,
+                     FoobaraDemo::LoanOrigination::FindCreditPolicy,
+                     FoobaraDemo::LoanOrigination::DenyLoanFile,
+                     FoobaraDemo::LoanOrigination::ApproveLoanFile
+
+          verbose v
+        end
+
+        stub_class("FoobaraDemo::LoanOrigination::ReviewAllLoanFilesNeedingReview", described_class) do
+          result do
+            approved_count :integer, :required
+            denied_count :integer, :required
+          end
+          depends_on FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview,
+                     FoobaraDemo::LoanOrigination::ReviewLoanFile
+          verbose v
+        end
+      end
+
+      it "reviews all of the loan files needing review", vcr: { record: :none } do
+        loan_files = FoobaraDemo::LoanOrigination::FindAllLoanFiles.run!
+
+        expect(loan_files.map(&:state)).to all eq(:needs_review)
+
+        expect(outcome).to be_success
+        expect(result.keys).to contain_exactly(:approved_count, :denied_count)
+        expect(result[:approved_count]).to eq(1)
+        expect(result[:denied_count]).to eq(2)
+
+        loan_files = FoobaraDemo::LoanOrigination::FindAllLoanFiles.run!
+
+        expect(loan_files.map(&:state)).to contain_exactly(:drafting_docs, :denied, :denied)
+      end
+    end
   end
 end
