@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/foobara-demo/loan-origination.git
-  revision: f8c45410d2df56cb1f19d797d5b2e851096e367d
+  revision: 067b9ce30c27776e2d8218a45b5270d9f43acc5f
   specs:
     foobara-demo-loan-origination (0.0.1)
       foobara-local-files-crud-driver (~> 0.0.1)
@@ -53,15 +53,15 @@ GEM
       foobara-type-generator (~> 0.0.1)
       foobara-typescript-react-command-form-generator (~> 0.0.1)
       foobara-typescript-remote-command-generator (~> 0.0.1)
-    foobara (0.0.135)
+    foobara (0.0.136)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (>= 1.0.0)
       inheritable-thread-vars (~> 0.0.1)
-    foobara-agent (0.0.11)
+    foobara-agent (0.0.13)
       foobara (~> 0.0.126)
       foobara-llm-backed-command (~> 0.0.1)
-    foobara-ai (0.0.13)
+    foobara-ai (0.0.14)
     foobara-anthropic-api (0.0.11)
       foobara-cached-command
       foobara-http-api-command
@@ -91,7 +91,7 @@ GEM
       foobara
     foobara-json-schema-generator (0.0.6)
       foobara (~> 0.0.92)
-    foobara-llm-backed-command (0.0.9)
+    foobara-llm-backed-command (0.0.10)
       foobara (~> 0.0.132)
       foobara-ai (~> 0.0.1)
       foobara-json-schema-generator (~> 0.0.6)
@@ -202,7 +202,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rdoc (6.14.1)
+    rdoc (6.14.2)
       erb
       psych (>= 4.0.0)
     regexp_parser (2.10.0)

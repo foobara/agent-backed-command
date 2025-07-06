@@ -184,7 +184,7 @@ RSpec.describe Foobara::AgentBackedCommand do
       end
     end
 
-    context "with a AgentBackedCommand takes inputs" do
+    context "with an AgentBackedCommand that takes inputs" do
       let(:command_class) do
         v = verbose
 
