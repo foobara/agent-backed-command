@@ -30,7 +30,8 @@ module Foobara
         agent_name :string, :allow_nil
         llm_model :string,
                   :allow_nil,
-                  one_of: Foobara::Ai::AnswerBot::Types::ModelEnum,
+                  one_of: Ai::AnswerBot::Types::ModelEnum,
+                  default: Ai.default_llm_model,
                   description: "The model to use for the LLM"
         max_llm_calls_per_minute :integer, :allow_nil
         pass_aggregates_to_llm :boolean, :allow_nil

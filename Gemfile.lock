@@ -8,8 +8,8 @@ GIT
 PATH
   remote: .
   specs:
-    foobara-agent-backed-command (0.0.2)
-      foobara-agent (>= 0.0.1)
+    foobara-agent-backed-command (0.0.3)
+      foobara-agent (>= 0.0.1, < 2.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -61,8 +61,8 @@ GEM
     foobara-agent (0.0.14)
       foobara (~> 0.0.126)
       foobara-llm-backed-command (~> 1.0.0)
-    foobara-ai (0.0.14)
-    foobara-anthropic-api (1.0.0)
+    foobara-ai (1.0.0)
+    foobara-anthropic-api (1.0.1)
       foobara-cached-command
       foobara-http-api-command
     foobara-cached-command (0.0.2)
@@ -91,10 +91,10 @@ GEM
       foobara
     foobara-json-schema-generator (1.0.0)
       foobara (~> 0.0.92)
-    foobara-llm-backed-command (1.0.0)
-      foobara (~> 0.0.132)
-      foobara-ai (~> 0.0.1)
-      foobara-json-schema-generator (~> 1.0.0)
+    foobara-llm-backed-command (1.0.1)
+      foobara (>= 0.0.136, < 2.0.0)
+      foobara-ai (>= 1.0.0, < 2.0.0)
+      foobara-json-schema-generator (>= 1.0.0, < 2.0.0)
     foobara-local-files-crud-driver (0.0.10)
       foobara (~> 0.0.102)
     foobara-local-files-crud-driver-generator (0.0.3)
@@ -103,7 +103,7 @@ GEM
     foobara-lru-cache (0.0.2)
     foobara-mcp-connector-generator (0.0.6)
       foobara (~> 0.0.99)
-    foobara-open-ai-api (1.0.0)
+    foobara-open-ai-api (1.0.1)
       foobara-cached-command
       foobara-http-api-command
     foobara-organization-generator (0.0.2)
@@ -273,10 +273,10 @@ PLATFORMS
 DEPENDENCIES
   foob
   foobara-agent-backed-command!
-  foobara-anthropic-api (~> 1.0.0)
+  foobara-anthropic-api (>= 1.0.1, < 2.0.0)
   foobara-demo-loan-origination!
   foobara-dotenv-loader (~> 0.0.1)
-  foobara-open-ai-api (~> 1.0.0)
+  foobara-open-ai-api (>= 1.0.1, < 2.0.0)
   foobara-rubocop-rules (>= 1.0.0)
   foobara-spec-helpers (~> 0.0.1)
   guard-rspec
