@@ -9,7 +9,8 @@ module Foobara
 
     class << self
       # TODO: does this need to be a Concern for proper inheritance?
-      attr_accessor :is_verbose, :io_out, :io_err, :context, :agent_name, :llm_model, :max_llm_calls_per_minute
+      attr_accessor :is_verbose, :io_out, :io_err, :context, :agent_name, :llm_model, :max_llm_calls_per_minute,
+                    :pass_aggregates_to_llm, :result_entity_depth
 
       def verbose(value = true)
         self.is_verbose = value
@@ -22,7 +23,7 @@ module Foobara
 
     inputs do
       agent_options do
-        verbose :boolean
+        verbose :boolean, :allow_nil
         io_out :duck
         io_err :duck
         context Foobara::Agent::Context, :allow_nil, "The current context of the agent"
@@ -32,6 +33,8 @@ module Foobara
                   one_of: Foobara::Ai::AnswerBot::Types::ModelEnum,
                   description: "The model to use for the LLM"
         max_llm_calls_per_minute :integer, :allow_nil
+        pass_aggregates_to_llm :boolean, :allow_nil
+        result_entity_depth :symbol, :allow_nil, one_of: Foobara::AssociationDepth
       end
     end
 
@@ -97,7 +100,7 @@ module Foobara
       verbose = agent_options&.[](:verbose)
       verbose = self.class.verbose? if verbose.nil?
 
-      self.agent = Foobara::Agent.new(
+      opts = {
         command_classes:,
         include_message_to_user_in_result:,
         result_type: agent_result_type,
@@ -107,8 +110,35 @@ module Foobara
         agent_name:,
         context: agent_options&.[](:context) || self.class.context,
         llm_model: agent_options&.[](:llm_model) || self.class.llm_model,
+        # TODO: eliminate this now that we have backoffs for 529s and 429s
         max_llm_calls_per_minute: agent_options&.[](:max_llm_calls_per_minute) || self.class.max_llm_calls_per_minute
-      )
+      }
+
+      if agent_options&.[](:result_entity_depth).nil?
+        unless self.class.result_entity_depth.nil?
+          opts[:result_entity_depth] = self.class.result_entity_depth
+        end
+      else
+        opts[:result_entity_depth] = agent_options[:result_entity_depth]
+      end
+
+      if agent_options&.[](:pass_aggregates_to_llm).nil?
+        unless self.class.pass_aggregates_to_llm.nil?
+          opts[:pass_aggregates_to_llm] = self.class.pass_aggregates_to_llm
+        end
+      else
+        opts[:pass_aggregates_to_llm] = agent_options[:pass_aggregates_to_llm]
+      end
+
+      self.agent = Foobara::Agent.new(**opts)
+    end
+
+    def pass_aggregates_to_llm?
+      if agent_options&.[](:pass_aggregates_to_llm).nil?
+        self.class.pass_aggregates_to_llm
+      else
+        agent_options[:pass_aggregates_to_llm]
+      end
     end
 
     def construct_goal_if_needed
@@ -132,13 +162,24 @@ module Foobara
             inputs_type = TypeDeclarations::Attributes.reject(inputs_type.declaration_data, :agent_options)
             inputs_type = domain.foobara_type_from_declaration(inputs_type)
 
+            association_depth = if pass_aggregates_to_llm?
+                                  AssociationDepth::AGGREGATE
+                                else
+                                  AssociationDepth::ATOM
+                                end
+
             json_inputs_type = JsonSchemaGenerator.to_json_schema(
               inputs_type,
-              association_depth: JsonSchemaGenerator::AssociationDepth::ATOM
+              association_depth:
             )
             goal += " The inputs to this command have the following type:\n\n#{json_inputs_type}\n\n"
 
-            serializer = Foobara::CommandConnectors::Serializers::AtomicSerializer.new
+            serializer = if pass_aggregates_to_llm?
+                           CommandConnectors::Serializers::AggregateSerializer
+                         else
+                           CommandConnectors::Serializers::AtomicSerializer
+                         end.new
+
             inputs_json = serializer.serialize(inputs.except(:agent_options))
             inputs_json = JSON.fast_generate(inputs_json)
             goal += "You have been ran with the following inputs:\n\n#{inputs_json}"

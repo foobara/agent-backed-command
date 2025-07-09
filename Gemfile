@@ -9,6 +9,7 @@ gemspec
 # gem "foobara-agent", path: "../agent"
 # gem "foobara-http-api-command", path: "../http-api-command"
 # gem "foobara-llm-backed-command", path: "../llm-backed-command"
+# gem "foobara-json-schema-generator", path: "../json-schema-generator"
 
 gem "foobara-dotenv-loader", "~> 0.0.1"
 
@@ -23,9 +24,9 @@ group :development do
 end
 
 group :development, :test do
-  gem "foobara-anthropic-api" # , path: "../anthropic-api"
+  gem "foobara-anthropic-api", "~> 1.0.0" # , path: "../anthropic-api"
   # gem "foobara-ollama-api"
-  gem "foobara-open-ai-api"
+  gem "foobara-open-ai-api", "~> 1.0.0"
 
   gem "pry"
   gem "pry-byebug"
