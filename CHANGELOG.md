@@ -1,3 +1,7 @@
+## [0.0.4] - 2025-07-10
+
+- Support DSL forms for several of the agent options
+
 ## [0.0.3] - 2025-07-09
 
 - Make use of Ai.default_llm_model

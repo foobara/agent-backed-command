@@ -9,15 +9,42 @@ module Foobara
 
     class << self
       # TODO: does this need to be a Concern for proper inheritance?
-      attr_accessor :is_verbose, :io_out, :io_err, :context, :agent_name, :llm_model, :max_llm_calls_per_minute,
-                    :pass_aggregates_to_llm, :result_entity_depth
+      attr_accessor :io_out, :io_err, :context
 
       def verbose(value = true)
-        self.is_verbose = value
+        @is_verbose = value
       end
 
       def verbose?
-        is_verbose
+        @is_verbose
+      end
+
+      def pass_aggregates_to_llm(value = true)
+        @should_pass_aggregates_to_llm = value
+      end
+
+      def pass_aggregates_to_llm?
+        @should_pass_aggregates_to_llm
+      end
+
+      [
+        :agent_name,
+        :llm_model,
+        :max_llm_calls_per_minute,
+        :result_entity_depth
+      ].each do |method_name|
+        define_method method_name do |*args|
+          case args.size
+          when 0
+            instance_variable_get("@#{method_name}")
+          when 1
+            instance_variable_set("@#{method_name}", args[0])
+          else
+            # :nocov:
+            raise ArgumentError, "Unexpected number of arguments: #{args.size}"
+            # :nocov:
+          end
+        end
       end
     end
 
@@ -123,20 +150,18 @@ module Foobara
         opts[:result_entity_depth] = agent_options[:result_entity_depth]
       end
 
-      if agent_options&.[](:pass_aggregates_to_llm).nil?
-        unless self.class.pass_aggregates_to_llm.nil?
-          opts[:pass_aggregates_to_llm] = self.class.pass_aggregates_to_llm
-        end
-      else
-        opts[:pass_aggregates_to_llm] = agent_options[:pass_aggregates_to_llm]
-      end
+      opts[:pass_aggregates_to_llm] = if agent_options&.[](:pass_aggregates_to_llm).nil?
+                                        self.class.pass_aggregates_to_llm?
+                                      else
+                                        agent_options[:pass_aggregates_to_llm]
+                                      end
 
       self.agent = Foobara::Agent.new(**opts)
     end
 
     def pass_aggregates_to_llm?
       if agent_options&.[](:pass_aggregates_to_llm).nil?
-        self.class.pass_aggregates_to_llm
+        self.class.pass_aggregates_to_llm?
       else
         agent_options[:pass_aggregates_to_llm]
       end

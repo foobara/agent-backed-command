@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    foobara-agent-backed-command (0.0.3)
+    foobara-agent-backed-command (0.0.4)
       foobara-agent (>= 0.0.1, < 2.0.0)
 
 GEM
@@ -58,9 +58,9 @@ GEM
       foobara-lru-cache (~> 0.0.2)
       foobara-util (>= 1.0.0)
       inheritable-thread-vars (~> 0.0.1)
-    foobara-agent (0.0.14)
-      foobara (~> 0.0.126)
-      foobara-llm-backed-command (~> 1.0.0)
+    foobara-agent (0.0.17)
+      foobara (>= 0.0.136, < 2.0.0)
+      foobara-llm-backed-command (>= 1.0.0, < 2.0.0)
     foobara-ai (1.0.0)
     foobara-anthropic-api (1.0.1)
       foobara-cached-command

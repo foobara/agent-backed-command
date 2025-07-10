@@ -57,9 +57,9 @@ RSpec.describe Foobara::AgentBackedCommand do
           required: [:applicant_name, :underwriter_decision]
         }
 
-        # self.llm_model = "gpt-4o"
-        self.llm_model = "claude-opus-4-20250514"
-        # self.llm_model = "claude-3-7-sonnet-20250219"
+        # llm_model "gpt-4o"
+        llm_model "claude-opus-4-20250514"
+        # llm_model "claude-3-7-sonnet-20250219"
       end
     end
     # TODO: uncomment this when re-recording cassettes if needed
@@ -309,8 +309,8 @@ RSpec.describe Foobara::AgentBackedCommand do
                        FoobaraDemo::LoanOrigination::DenyLoanFile,
                        FoobaraDemo::LoanOrigination::ApproveLoanFile
 
-            self.llm_model = "claude-opus-4-20250514"
-            self.pass_aggregates_to_llm = true
+            llm_model  "claude-opus-4-20250514"
+            pass_aggregates_to_llm
             verbose v
           end
 
@@ -322,9 +322,9 @@ RSpec.describe Foobara::AgentBackedCommand do
             depends_on FoobaraDemo::LoanOrigination::FindALoanFileThatNeedsReview,
                        FoobaraDemo::LoanOrigination::ReviewLoanFile
 
-            self.llm_model = "gpt-4o"
-            self.pass_aggregates_to_llm = false
-            self.result_entity_depth = Foobara::AssociationDepth::AGGREGATE
+            llm_model "gpt-4o"
+            pass_aggregates_to_llm false
+            result_entity_depth Foobara::AssociationDepth::AGGREGATE
             verbose v
           end
         end
