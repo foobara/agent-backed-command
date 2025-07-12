@@ -1,14 +1,14 @@
 GIT
   remote: https://github.com/foobara-demo/loan-origination.git
-  revision: 067b9ce30c27776e2d8218a45b5270d9f43acc5f
+  revision: 23db546cb2fbb4682ffeeab6d91770b1095ab054
   specs:
     foobara-demo-loan-origination (0.0.1)
-      foobara-local-files-crud-driver (~> 0.0.1)
+      foobara-local-files-crud-driver (< 2.0.0)
 
 PATH
   remote: .
   specs:
-    foobara-agent-backed-command (0.0.4)
+    foobara-agent-backed-command (0.0.5)
       foobara-agent (>= 0.0.1, < 2.0.0)
 
 GEM
@@ -89,8 +89,8 @@ GEM
       foobara (~> 0.0.116)
     foobara-http-api-command (0.0.9)
       foobara
-    foobara-json-schema-generator (1.0.0)
-      foobara (~> 0.0.92)
+    foobara-json-schema-generator (1.0.1)
+      foobara (>= 0.0.136, < 2.0.0)
     foobara-llm-backed-command (1.0.1)
       foobara (>= 0.0.136, < 2.0.0)
       foobara-ai (>= 1.0.0, < 2.0.0)
@@ -140,7 +140,7 @@ GEM
     foobara-typescript-remote-command-generator (0.0.24)
       foobara-files-generator (~> 0.0.1)
     foobara-util (1.0.1)
-    formatador (1.1.0)
+    formatador (1.1.1)
     guard (2.19.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)

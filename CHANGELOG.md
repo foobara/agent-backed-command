@@ -1,3 +1,7 @@
+## [0.0.5] - 2025-07-12
+
+- Allow agent_options input to be removed
+
 ## [0.0.4] - 2025-07-10
 
 - Support DSL forms for several of the agent options

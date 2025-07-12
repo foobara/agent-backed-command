@@ -159,6 +159,10 @@ module Foobara
       self.agent = Foobara::Agent.new(**opts)
     end
 
+    def agent_options
+      @agent_options ||= inputs[:agent_options] || {}
+    end
+
     def pass_aggregates_to_llm?
       if agent_options&.[](:pass_aggregates_to_llm).nil?
         self.class.pass_aggregates_to_llm?
