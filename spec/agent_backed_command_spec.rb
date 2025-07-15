@@ -14,9 +14,7 @@ RSpec.describe Foobara::AgentBackedCommand do
   let(:command) { command_class.new(inputs) }
   let(:inputs) do
     {
-      agent_options: {
-        max_llm_calls_per_minute:
-      }.tap do |h|
+      agent_options: {}.tap do |h|
         unless pass_aggregates_to_llm.nil?
           h[:pass_aggregates_to_llm] = pass_aggregates_to_llm
         end
@@ -36,7 +34,6 @@ RSpec.describe Foobara::AgentBackedCommand do
   let(:outcome) { command.run }
   let(:result) { outcome.result }
   let(:errors_hash) { outcome.errors_hash }
-  let(:max_llm_calls_per_minute) { 100 }
   let(:verbose) { nil }
   let(:pass_aggregates_to_llm) { nil }
   let(:result_entity_depth) { nil }
@@ -62,8 +59,6 @@ RSpec.describe Foobara::AgentBackedCommand do
         # llm_model "claude-3-7-sonnet-20250219"
       end
     end
-    # TODO: uncomment this when re-recording cassettes if needed
-    # let(:max_llm_calls_per_minute) { 4 }
 
     before do
       FoobaraDemo::LoanOrigination::Demo::PrepareDemoRecords.run!

@@ -30,7 +30,6 @@ module Foobara
       [
         :agent_name,
         :llm_model,
-        :max_llm_calls_per_minute,
         :result_entity_depth
       ].each do |method_name|
         define_method method_name do |*args|
@@ -60,7 +59,6 @@ module Foobara
                   one_of: Ai::AnswerBot::Types::ModelEnum,
                   default: Ai.default_llm_model,
                   description: "The model to use for the LLM"
-        max_llm_calls_per_minute :integer, :allow_nil
         pass_aggregates_to_llm :boolean, :allow_nil
         result_entity_depth :symbol, :allow_nil, one_of: Foobara::AssociationDepth
       end
@@ -137,9 +135,7 @@ module Foobara
         io_err: agent_options&.[](:io_err) || self.class.io_err,
         agent_name:,
         context: agent_options&.[](:context) || self.class.context,
-        llm_model: agent_options&.[](:llm_model) || self.class.llm_model,
-        # TODO: eliminate this now that we have backoffs for 529s and 429s
-        max_llm_calls_per_minute: agent_options&.[](:max_llm_calls_per_minute) || self.class.max_llm_calls_per_minute
+        llm_model: agent_options&.[](:llm_model) || self.class.llm_model
       }
 
       if agent_options&.[](:result_entity_depth).nil?
