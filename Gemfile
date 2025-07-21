@@ -11,7 +11,7 @@ gemspec
 # gem "foobara-llm-backed-command", path: "../llm-backed-command"
 # gem "foobara-json-schema-generator", path: "../json-schema-generator"
 
-gem "foobara-dotenv-loader", "~> 0.0.1"
+gem "foobara-dotenv-loader", "< 2.0.0"
 
 gem "rake"
 
@@ -38,7 +38,7 @@ end
 group :test do
   gem "foobara-demo-loan-origination", github: "foobara-demo/loan-origination"
   # path: "../../foobara-demo/loan-origination"
-  gem "foobara-spec-helpers", "~> 0.0.1"
+  gem "foobara-spec-helpers"
   gem "rspec"
   gem "rspec-its"
   gem "ruby-prof"

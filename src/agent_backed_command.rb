@@ -30,7 +30,8 @@ module Foobara
       [
         :agent_name,
         :llm_model,
-        :result_entity_depth
+        :result_entity_depth,
+        :maximum_command_calls
       ].each do |method_name|
         define_method method_name do |*args|
           case args.size
@@ -60,6 +61,10 @@ module Foobara
                   default: Ai.default_llm_model,
                   description: "The model to use for the LLM"
         pass_aggregates_to_llm :boolean, :allow_nil
+        maximum_command_calls :integer,
+                              :allow_nil,
+                              default: 25,
+                              description: "Maximum number of commands to run before giving up"
         result_entity_depth :symbol, :allow_nil, one_of: Foobara::AssociationDepth
       end
     end
@@ -151,6 +156,12 @@ module Foobara
                                       else
                                         agent_options[:pass_aggregates_to_llm]
                                       end
+
+      maximum_command_calls = agent_options&.[](:maximum_command_calls) || self.class.maximum_command_calls
+
+      if maximum_command_calls
+        opts[:maximum_command_calls] = maximum_command_calls
+      end
 
       self.agent = Foobara::Agent.new(**opts)
     end

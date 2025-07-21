@@ -72,9 +72,9 @@ RSpec.describe Foobara::AgentBackedCommand do
 
       expect(outcome).to be_success
       expect(result).to contain_exactly(
-        { applicant_name: "Barbara", underwriter_decision: "denied" },
-        { applicant_name: "Basil", underwriter_decision: "denied" },
-        { applicant_name: "Fumiko", underwriter_decision: "approved" }
+        { applicant_name: "Barbara", underwriter_decision: :denied },
+        { applicant_name: "Basil", underwriter_decision: :denied },
+        { applicant_name: "Fumiko", underwriter_decision: :approved }
       )
 
       loan_files = FoobaraDemo::LoanOrigination::FindAllLoanFiles.run!
@@ -376,9 +376,9 @@ RSpec.describe Foobara::AgentBackedCommand do
           end
 
           expect(results.map(&:to_h)).to contain_exactly(
-            { decision: "denied", credit_score_used: 650, denied_reasons: ["low_credit_score"] },
-            { decision: "denied", credit_score_used: 750, denied_reasons: ["insufficient_pay_stubs_provided"] },
-            { decision: "approved", credit_score_used: 750 }
+            { decision: :denied, credit_score_used: 650, denied_reasons: [:low_credit_score] },
+            { decision: :denied, credit_score_used: 750, denied_reasons: [:insufficient_pay_stubs_provided] },
+            { decision: :approved, credit_score_used: 750 }
           )
 
           loan_files = FoobaraDemo::LoanOrigination::FindAllLoanFiles.run!

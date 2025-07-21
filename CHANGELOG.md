@@ -1,3 +1,7 @@
+## [0.0.6] - 2025-07-21
+
+- Make sure foobara-ai gem is properly loaded
+
 ## [0.0.5] - 2025-07-12
 
 - Allow agent_options input to be removed
