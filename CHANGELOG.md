@@ -1,3 +1,7 @@
+## [0.0.7] - 2025-07-23
+
+- Do not let ABCs use the #agent_options input of other ABCs
+
 ## [0.0.6] - 2025-07-21
 
 - Make sure foobara-ai gem is properly loaded

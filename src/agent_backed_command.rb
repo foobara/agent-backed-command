@@ -126,13 +126,12 @@ module Foobara
                             end
                           end
 
-      agent_name = agent_options&.[](:agent_name) || self.class.agent_name || "#{self.class.scoped_short_name}Agent"
+      agent_name = agent_options&.[](:agent_name) || self.class.agent_name || self.class.scoped_short_name
 
       verbose = agent_options&.[](:verbose)
       verbose = self.class.verbose? if verbose.nil?
 
       opts = {
-        command_classes:,
         include_message_to_user_in_result:,
         result_type: agent_result_type,
         verbose:,
@@ -164,6 +163,27 @@ module Foobara
       end
 
       self.agent = Foobara::Agent.new(**opts)
+
+      command_classes.each do |klass|
+        if klass.is_a?(::Symbol)
+          real_class = Namespace.global.foobara_lookup_command(
+            klass,
+            mode: Namespace::LookupMode::ABSOLUTE
+          )
+
+          if real_class
+            klass = real_class
+          end
+        end
+
+        opts = if klass.is_a?(Class) && klass < AgentBackedCommand
+                 { inputs: { reject: [:agent_options] } }
+               else
+                 {}
+               end
+
+        agent.connect(klass, **opts)
+      end
     end
 
     def agent_options
@@ -184,10 +204,9 @@ module Foobara
         goal = Util.underscore(goal)
         goal = Util.humanize(goal)
 
-        goal = "You are an agent backed command named #{self.class.scoped_short_name}. Your goal is: #{goal}."
-
         if self.class.description
-          goal += " The command description is: #{self.class.description}."
+          goal += "\n\nYour behavior has been described to the person or agent that chose to run you as: "
+          goal += self.class.description
         end
 
         inputs_type = self.class.inputs_type
@@ -209,7 +228,7 @@ module Foobara
               inputs_type,
               association_depth:
             )
-            goal += " The inputs to this command have the following type:\n\n#{json_inputs_type}\n\n"
+            goal += "\n\nYour inputs to this command have the following type:\n\n#{json_inputs_type}\n\n"
 
             serializer = if pass_aggregates_to_llm?
                            CommandConnectors::Serializers::AggregateSerializer
