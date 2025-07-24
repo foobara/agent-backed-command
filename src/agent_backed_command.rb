@@ -204,9 +204,10 @@ module Foobara
         goal = Util.underscore(goal)
         goal = Util.humanize(goal)
 
+        goal = "You are an agent backed command named #{self.class.scoped_short_name}. Your goal is: #{goal}."
+
         if self.class.description
-          goal += "\n\nYour behavior has been described to the person or agent that chose to run you as: "
-          goal += self.class.description
+          goal += " The command description is: #{self.class.description}."
         end
 
         inputs_type = self.class.inputs_type
@@ -228,7 +229,7 @@ module Foobara
               inputs_type,
               association_depth:
             )
-            goal += "\n\nYour inputs to this command have the following type:\n\n#{json_inputs_type}\n\n"
+            goal += "\n\nThe inputs to this command have the following type:\n\n#{json_inputs_type}\n\n"
 
             serializer = if pass_aggregates_to_llm?
                            CommandConnectors::Serializers::AggregateSerializer

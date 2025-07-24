@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    foobara-agent-backed-command (0.0.7)
+    foobara-agent-backed-command (0.0.8)
       foobara-agent (>= 0.0.1, < 2.0.0)
 
 GEM

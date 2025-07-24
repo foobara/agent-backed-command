@@ -1,3 +1,7 @@
+## [0.0.8] - 2025-07-23
+
+- Attempt to fix some regressions by reverting some construct goal changes
+
 ## [0.0.7] - 2025-07-23
 
 - Do not let ABCs use the #agent_options input of other ABCs
