@@ -1,3 +1,7 @@
+## [0.1.0] - 2025-08-22
+
+- Handle Foobara 0.1.0 type declarations
+
 ## [0.0.8] - 2025-07-23
 
 - Attempt to fix some regressions by reverting some construct goal changes

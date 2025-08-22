@@ -38,7 +38,7 @@ end
 group :test do
   gem "foobara-demo-loan-origination", github: "foobara-demo/loan-origination"
   # path: "../../foobara-demo/loan-origination"
-  gem "foobara-spec-helpers"
+  gem "foobara-spec-helpers", "< 2.0.0"
   gem "rspec"
   gem "rspec-its"
   gem "ruby-prof"

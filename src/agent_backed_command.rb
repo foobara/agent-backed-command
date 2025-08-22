@@ -168,7 +168,7 @@ module Foobara
         if klass.is_a?(::Symbol)
           real_class = Namespace.global.foobara_lookup_command(
             klass,
-            mode: Namespace::LookupMode::ABSOLUTE
+            mode: Namespace::LookupMode::ABSOLUTE_SINGLE_NAMESPACE
           )
 
           if real_class
