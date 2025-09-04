@@ -215,7 +215,8 @@ module Foobara
           input_keys = inputs_type.element_types.keys - [:agent_options]
 
           unless input_keys.empty?
-            domain = inputs_type.created_in_namespace.foobara_domain
+            domain = Domain.to_domain(inputs_type.created_in_namespace)
+
             inputs_type = TypeDeclarations::Attributes.reject(inputs_type.declaration_data, :agent_options)
             inputs_type = domain.foobara_type_from_declaration(inputs_type)
 

@@ -1,3 +1,7 @@
+## [0.1.1] - 2025-09-04
+
+- Fix bug that results from not all namespaces supporting a #foobara_domain method
+
 ## [0.1.0] - 2025-08-22
 
 - Handle Foobara 0.1.0 type declarations
