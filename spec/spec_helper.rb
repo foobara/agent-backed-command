@@ -6,6 +6,8 @@ require "pry"
 require "pry-byebug"
 require "rspec/its"
 
+Warning[:deprecated] = true
+
 require "foobara_demo/loan_origination"
 
 require_relative "support/simplecov"

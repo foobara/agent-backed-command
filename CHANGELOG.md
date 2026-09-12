@@ -1,3 +1,7 @@
+## [0.1.2] - 2026-09-11
+
+- Handle removed JSON.fast_generate
+
 ## [0.1.1] - 2025-09-04
 
 - Fix bug that results from not all namespaces supporting a #foobara_domain method

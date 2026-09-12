@@ -40,9 +40,9 @@ module Foobara
           when 1
             instance_variable_set("@#{method_name}", args[0])
           else
-            # :nocov:
+            # simplecov:disable
             raise ArgumentError, "Unexpected number of arguments: #{args.size}"
-            # :nocov:
+            # simplecov:enable
           end
         end
       end
@@ -239,7 +239,7 @@ module Foobara
                          end.new
 
             inputs_json = serializer.serialize(inputs.except(:agent_options))
-            inputs_json = JSON.fast_generate(inputs_json)
+            inputs_json = JSON.generate(inputs_json)
             goal += "You have been ran with the following inputs:\n\n#{inputs_json}"
           end
         end
@@ -255,7 +255,7 @@ module Foobara
     def handle_agent_outcome
       unless agent_outcome.success?
         # TODO: test this code path maybe with a stub that forces failure
-        # :nocov:
+        # simplecov:disable
         agent_outcome.each_error do |error|
           add_error(error)
         rescue Halt
@@ -263,7 +263,7 @@ module Foobara
         end
 
         halt!
-        # :nocov:
+        # simplecov:enable
       end
     end
 
