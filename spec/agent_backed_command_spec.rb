@@ -255,7 +255,7 @@ RSpec.describe Foobara::AgentBackedCommand do
     context "with pass_aggregates_to_llm and result_entity_depth options" do
       let(:pass_aggregates_to_llm) { true }
       let(:result_entity_depth) { Foobara::AssociationDepth::AGGREGATE }
-      let(:llm_model) { "claude-sonnet-4-20250514" }
+      let(:llm_model) { "claude-sonnet-5-5" }
 
       let(:command_class) do
         stub_class("FoobaraDemo::LoanOrigination::ReviewAllLoanFilesNeedingReview", described_class) do
@@ -311,7 +311,7 @@ RSpec.describe Foobara::AgentBackedCommand do
                        FoobaraDemo::LoanOrigination::DenyLoanFile,
                        FoobaraDemo::LoanOrigination::ApproveLoanFile
 
-            llm_model  "claude-opus-4-20250514"
+            llm_model "claude-opus-5"
             pass_aggregates_to_llm
             verbose v
           end
@@ -377,7 +377,7 @@ RSpec.describe Foobara::AgentBackedCommand do
                 pass_aggregates_to_llm: true,
                 result_entity_depth: Foobara::AssociationDepth::AGGREGATE,
                 verbose:,
-                llm_model: "claude-opus-4-20250514"
+                llm_model: "claude-opus-5"
               }
             )
           end

@@ -29,8 +29,17 @@ require "foobara/spec_helpers/all"
 # To rerecord, delete tmp/ and uncomment the raise call below and change :none to :once
 VCR.use_cassette("list_models", record: :none) do
   require "foobara/anthropic_api"
+
   require "foobara/open_ai_api"
-  #  require "foobara/ollama_api"
+  require "foobara/ollama_api"
+
   require_relative "../boot/finish"
+
+  # let's pre-fetch all of the individual models to make recording cassettes less annoying
+  Foobara::Ai::AnthropicApi::Types::ModelEnum.all_values.each do |model|
+    Foobara::Ai::AnthropicApi::GetModel.run!(model:)
+  end
 end
 # raise "Just rerecording the list_models cassette, no need to proceed"
+
+Foobara.start!
